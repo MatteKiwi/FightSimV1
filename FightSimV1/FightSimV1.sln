@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightSimV1", "FightSimV1\FightSimV1.csproj", "{A943FE75-9444-4EC7-B282-A9AF65BD6012}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A943FE75-9444-4EC7-B282-A9AF65BD6012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A943FE75-9444-4EC7-B282-A9AF65BD6012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A943FE75-9444-4EC7-B282-A9AF65BD6012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A943FE75-9444-4EC7-B282-A9AF65BD6012}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5DB4BB1C-9812-47BF-A168-6747E55C7932}
+	EndGlobalSection
+EndGlobal
