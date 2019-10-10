@@ -16,8 +16,8 @@ namespace FightSimV1
             //string a/b är får sitt namn får name metoden inom classen fighter
 
 
-            string nameA = A.name();
-            string nameB = B.name();
+            string nameA = A.RandomName();
+            string nameB = B.RandomName();
             //välkommnar användaren
             Console.WriteLine("Welcome to fight sim, just press enter and enojoy");
             //whilpe loop med hela spelet

@@ -12,7 +12,7 @@ namespace FightSimV1
         private int hp = 100;
         public static Random gen = new Random();
 
-        public string name()
+        public string RandomName()
         {
             List<string> names = new List<string> { "Carlos", "Juan", "Felle", "Olivia", "Erik", "Magnus", "Ryu", "Ken", "Svante", "Vincent", "Sebbe", "Olle", "Markus" };
             int i = gen.Next(0, 12);
