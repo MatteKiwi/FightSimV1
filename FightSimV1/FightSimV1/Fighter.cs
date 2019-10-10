@@ -10,8 +10,15 @@ namespace FightSimV1
     {
         //variabler 
         private int hp = 100;
-        public string name;
         public static Random gen = new Random();
+
+        public string name()
+        {
+            List<string> names = new List<string> { "Carlos", "Juan", "Felle", "Olivia", "Erik", "Magnus", "Ryu", "Ken", "Svante", "Vincent", "Sebbe", "Olle", "Markus" };
+            int i = gen.Next(0, 12);
+            return names[i];
+        }
+
         //generara en random nummer för attack
         public int Attack()
         {

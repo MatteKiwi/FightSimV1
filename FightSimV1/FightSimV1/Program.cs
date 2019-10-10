@@ -13,9 +13,11 @@ namespace FightSimV1
             //skapar två instanser av fighter
             Fighter A = new Fighter();
             Fighter B = new Fighter();
-            //ger dom namn för jag är lat och orkar inte ge använderen frihet att namnge dom
-            A.name = "Juan";
-            B.name = "Carlos";
+            //string a/b är får sitt namn får name metoden inom classen fighter
+
+
+            string nameA = A.name();
+            string nameB = B.name();
             //välkommnar användaren
             Console.WriteLine("Welcome to fight sim, just press enter and enojoy");
             //whilpe loop med hela spelet
@@ -25,17 +27,17 @@ namespace FightSimV1
                 B.Hurt(A.Attack());
                 A.Hurt(B.Attack());
                 //skriver ut namn samt hp för båda fighters
-                Console.WriteLine(A.name + " Hp: " + A.GetHp() + " " + B.name + " Hp: " + B.GetHp());
+                Console.WriteLine(nameA + " Hp: " + A.GetHp() + " " + nameB + " Hp: " + B.GetHp());
                 //if sats som kollar ifall dom lever och visar då vem som vann
                 if(A.IsAlive() == true)
                 {
-                    Console.WriteLine(B.name + " Won !");
+                    Console.WriteLine(nameB + " Won !");
                     Console.ReadLine();
                     break;
                 }
                 else if(B.IsAlive() == true)
                 {
-                    Console.WriteLine(A.name + " Won !");
+                    Console.WriteLine(nameA + " Won !");
                     Console.ReadLine();
                     break;
                 }
