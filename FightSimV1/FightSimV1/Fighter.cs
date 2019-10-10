@@ -10,7 +10,7 @@ namespace FightSimV1
     {
         private int hp = 100;
         public string name;
-        public Random gen = new Random();
+        public static Random gen = new Random();
 
         public int Attack()
         {
@@ -27,6 +27,7 @@ namespace FightSimV1
         {
             if (hp < 0)
             {
+                hp = 0;
                 return true;
 
             }
