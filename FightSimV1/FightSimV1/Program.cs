@@ -14,8 +14,6 @@ namespace FightSimV1
             Fighter A = new Fighter();
             Fighter B = new Fighter();
             //string a/b är får sitt namn får name metoden inom classen fighter
-
-
             string nameA = A.RandomName();
             string nameB = B.RandomName();
             //välkommnar användaren
@@ -23,11 +21,22 @@ namespace FightSimV1
             //whilpe loop med hela spelet
             while (true)
             {
-                //b tar skade av a attack och tvärtom för a
-                B.Hurt(A.Attack());
-                A.Hurt(B.Attack());
+                A.Present();
+
+                string input = Console.ReadLine();
                 //skriver ut namn samt hp för båda fighters
                 Console.WriteLine(nameA + " Hp: " + A.GetHp() + " " + nameB + " Hp: " + B.GetHp());
+                if (input == "1")
+                {
+                    //b tar skade av a attack och tvärtom för a
+                    B.Hurt(A.LightAttack());
+                    A.Hurt(B.LightAttack());                   
+                }
+                else if(input == "2")
+                {
+                    B.Hurt(A.HeavyAttack());
+                    A.Hurt(B.HeavyAttack());
+                }
                 //if sats som kollar ifall dom lever och visar då vem som vann
                 if(A.IsAlive() == true)
                 {
@@ -41,9 +50,7 @@ namespace FightSimV1
                     Console.ReadLine();
                     break;
                 }
-
-
-                Console.ReadLine();
+                //Console.ReadLine();
             }
         }
     }

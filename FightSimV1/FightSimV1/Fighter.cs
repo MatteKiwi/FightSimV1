@@ -11,21 +11,20 @@ namespace FightSimV1
         //variabler 
         private int hp = 100;
         public static Random gen = new Random();
-
+        //random namn till spelarna
         public string RandomName()
         {
             List<string> names = new List<string> { "Carlos", "Juan", "Felle", "Olivia", "Erik", "Magnus", "Ryu", "Ken", "Svante", "Vincent", "Sebbe", "Olle", "Markus" };
             int i = gen.Next(0, 12);
             return names[i];
         }
-
         //generara en random nummer för attack
         public int LightAttack()
         {
            int i = gen.Next(5, 30);
            return i;
         }
-
+        //20 % chans att man kan få in en heavyattack som skadar 90
         public int HeavyAttack()
         {
             int x = gen.Next(1, 100);
@@ -40,11 +39,8 @@ namespace FightSimV1
             {
                 int i = 90;
                 return i;
-            }
-
-           
+            }         
         }
-
         //tar bort hp
         public void Hurt(int amount)
         {
@@ -53,11 +49,10 @@ namespace FightSimV1
         //kollar ifall fighter lever
         public bool IsAlive()
         {
-            if (hp < 0)
+            if (hp <= 0)
             {
                 hp = 0;
                 return true;
-
             }
             else
             {
@@ -68,9 +63,13 @@ namespace FightSimV1
         public int GetHp()
         {
             int x = hp;
+            
             return x;
-        }
-
+        }   
         
+        public void Present()
+        {
+            Console.WriteLine("Press 1 to perform a !Light Attack!\nPress 2 to perform a !Heavy Attack! (hard to hit)");
+        }
     }
 }
