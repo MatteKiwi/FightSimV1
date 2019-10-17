@@ -20,11 +20,31 @@ namespace FightSimV1
         }
 
         //generara en random nummer för attack
-        public int Attack()
+        public int LightAttack()
         {
            int i = gen.Next(5, 30);
            return i;
         }
+
+        public int HeavyAttack()
+        {
+            int x = gen.Next(1, 100);
+
+            if(x <= 80)
+            {
+                int i = 0;
+                Console.WriteLine("Miss!");
+                return i;
+            }
+            else
+            {
+                int i = 90;
+                return i;
+            }
+
+           
+        }
+
         //tar bort hp
         public void Hurt(int amount)
         {
