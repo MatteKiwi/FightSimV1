@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace FightSimV1
 {
@@ -21,24 +22,30 @@ namespace FightSimV1
             //whilpe loop med hela spelet
             while (true)
             {
-                A.Present();
-
-                string input = Console.ReadLine();
                 //skriver ut namn samt hp för båda fighters
                 Console.WriteLine(nameA + " Hp: " + A.GetHp() + " " + nameB + " Hp: " + B.GetHp());
-                if (input == "1")
+                A.Present();
+
+                string input = Console.ReadLine();   
+                
+                if(input == "1")
                 {
                     //b tar skade av a attack och tvärtom för a
                     B.Hurt(A.LightAttack());
-                    A.Hurt(B.LightAttack());                   
+                    A.Hurt(B.LightAttack());
+                    Thread.Sleep(100);
+                    Console.Clear();
                 }
-                else if(input == "2")
+                if(input == "2")
                 {
                     B.Hurt(A.HeavyAttack());
                     A.Hurt(B.HeavyAttack());
+                    Thread.Sleep(1000);
+                    Console.Clear();
                 }
+               
                 //if sats som kollar ifall dom lever och visar då vem som vann
-                if(A.IsAlive() == true)
+                if (A.IsAlive() == true)
                 {
                     Console.WriteLine(nameB + " Won !");
                     Console.ReadLine();

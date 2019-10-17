@@ -38,6 +38,7 @@ namespace FightSimV1
             else
             {
                 int i = 90;
+                Console.WriteLine("Hit");
                 return i;
             }         
         }
